@@ -1,0 +1,34 @@
+/* =============
+    Divider
+============= */
+
+.divider{
+
+    .content{
+        display: grid;
+        grid-template-columns: 100%;
+        gap:15px;
+        
+        .sub-content{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas:
+            "h2 image"
+            "button image"
+            ;
+
+            h2{
+                grid-area: h2;
+            }
+
+            a{
+                grid-area: button;
+            }
+
+            img{
+                grid-area: image;
+            }
+        }
+
+    }
+}

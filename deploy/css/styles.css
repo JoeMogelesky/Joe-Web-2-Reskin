@@ -352,6 +352,15 @@ template {
 /* =============
     Base
 ============= */
+.container {
+  display: grid;
+  grid-template-columns: 15px auto 15px;
+  grid-template-areas: ". content .";
+}
+.container .content {
+  grid-area: content;
+}
+
 /* =============
     Typography
 ============= */
@@ -382,6 +391,88 @@ textarea {
 /* =============
     Header
 ============= */
+header .content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
 /* =============
     Footer
 ============= */
+footer .content {
+  display: grid;
+  grid-template-columns: 100%;
+}
+footer .content .locations ul, footer .content .follow ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+footer .content .follow ul li {
+  display: inline-block;
+}
+
+/* =============
+    Search
+============= */
+/* =============
+    Hero
+============= */
+.hero img {
+  width: 100%;
+}
+.hero .content {
+  display: grid;
+  grid-template-columns: 100%;
+}
+.hero .content .arrow {
+  width: 10px;
+}
+
+/* =============
+    Divider
+============= */
+.divider .content {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 15px;
+}
+.divider .content .sub-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "h2 image" "button image";
+}
+.divider .content .sub-content h2 {
+  grid-area: h2;
+}
+.divider .content .sub-content a {
+  grid-area: button;
+}
+.divider .content .sub-content img {
+  grid-area: image;
+}
+
+/* =============
+    Gallery
+============= */
+.gallery ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+.gallery ul li img {
+  width: 100%;
+}
+.gallery ul li.img-3 {
+  display: none;
+}
+
+/* =============
+    What's New
+============= */
+.whats-new .article-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 15px;
+}
+.whats-new .article-grid article img {
+  width: 100%;
+}
